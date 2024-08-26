@@ -17,7 +17,7 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
- *
+ * 
  */
 
 #include "../inc/MarlinConfig.h"
@@ -34,11 +34,11 @@ TWIBus i2c;
 
 TWIBus::TWIBus() {
   #if I2C_SLAVE_ADDRESS == 0
-
-    #if PINS_EXIST(I2C_SCL, I2C_SDA) && DISABLED(SOFT_I2C_EEPROM)
+  
+    //#if PINS_EXIST(I2C_SCL, I2C_SDA) && DISABLED(SOFT_I2C_EEPROM)
       Wire.setSDA(pin_t(I2C_SDA_PIN));
       Wire.setSCL(pin_t(I2C_SCL_PIN));
-    #endif
+    //#endif
 
     Wire.begin();                   // No address joins the BUS as the master
 
@@ -93,8 +93,7 @@ void TWIBus::send() {
 // static
 void TWIBus::echoprefix(uint8_t bytes, FSTR_P const pref, uint8_t adr) {
   SERIAL_ECHO_START();
-  SERIAL_ECHOF(pref);
-  SERIAL_ECHOPGM(": from:", adr, " bytes:", bytes, " data:");
+  SERIAL_ECHO(pref, F(": from:"), adr, F(" bytes:"), bytes, F(" data:"));
 }
 
 // static
@@ -145,7 +144,7 @@ void TWIBus::echodata(uint8_t bytes, FSTR_P const pref, uint8_t adr, const uint8
 
 void TWIBus::echobuffer(FSTR_P const prefix, uint8_t adr) {
   echoprefix(buffer_s, prefix, adr);
-  LOOP_L_N(i, buffer_s) SERIAL_CHAR(buffer[i]);
+  for (uint8_t i = 0; i < buffer_s; ++i) SERIAL_CHAR(buffer[i]);
   SERIAL_EOL();
 }
 
