@@ -5,8 +5,7 @@ This is a modified version of [Marlin](https://github.com/bigtreetech/Marlin) co
 To update the board hardware, compile the firmware in your IDE (ex. VSCode). This will create a file called “firmware.bin” in <code>biostack-marlin/.pio/build/STM32H723ZG_btt/</code>
 
 Copy firmware.bin onto the SD card. Insert the SD card into the board. You may need to press the right most button to reboot the firmware. The indicator LED should blink rapidly when the flashware has successfully flashed. You may also verify that the flashware has flashed when firmware.bin is replaced by FIRMWARE.CUR on the SD card.  
-
-![IMG_3072](https://github.com/user-attachments/assets/f9f0a3ea-1bfe-4af8-9700-cd6b53ea799a)
+<img src="[IMG_3072](https://github.com/user-attachments/assets/f9f0a3ea-1bfe-4af8-9700-cd6b53ea799a)" width="400">
 
 ## How to Run Gcode scripts
 G-code is a computer numerical control (CNC) language used to automate machinery. It’s fairly simple -- there is an index of [G-code commands](https://marlinfw.org/meta/gcode/) that can take specified axes, positions, speeds, or other values as parameters.
