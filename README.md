@@ -6,6 +6,8 @@ To update the board hardware, compile the firmware in your IDE (ex. VSCode). Thi
 
 Copy firmware.bin onto the SD card. Insert the SD card into the board. You may need to press the right most button to reboot the firmware. The indicator LED should blink rapidly when the flashware has successfully flashed. You may also verify that the flashware has flashed when firmware.bin is replaced by FIRMWARE.CUR on the SD card.  
 
+<img src="[IMG_3072](https://github.com/user-attachments/assets/cd641333-ef65-490d-b530-ed87b7a88b35)" width="400">
+
 ## How to Run Gcode scripts
 G-code is a computer numerical control (CNC) language used to automate machinery. It’s fairly simple -- there is an index of [G-code commands](https://marlinfw.org/meta/gcode/) that can take specified axes, positions, speeds, or other values as parameters.
 
