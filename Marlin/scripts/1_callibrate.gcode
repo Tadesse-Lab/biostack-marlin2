@@ -13,3 +13,8 @@ G4 S1 ;wait 1 second
 
 G28 B C ;calibrate stackers
 G4 S1; 
+
+M260 A8  ;calibrate stacker cams via I2C
+M260 B52
+M260 S1
+G4 S3 
