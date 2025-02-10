@@ -1,4 +1,4 @@
-G28 A ; calibrate slider - need to update SD card on board if changing this
+G28 A ; calibrate slider - if changes made here, need to update SD card
 G0 A0
 G4 S1 ;wait 1 second
 G28 Z
