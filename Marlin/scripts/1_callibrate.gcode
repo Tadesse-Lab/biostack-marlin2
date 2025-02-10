@@ -1,4 +1,4 @@
-G28 A ; calibrate slider
+G28 A ; calibrate slider - need to update SD card on board if changing this
 G0 A0
 G4 S1 ;wait 1 second
 G28 Z
@@ -8,13 +8,13 @@ G4 S1
 G0 V70 ;move gantry
 G4 S1
 G28 Y X ;calibrate gripper and elbow
-G0 X0 
+G0 X0
 G4 S1 ;wait 1 second
 
 G28 B C ;calibrate stackers
-G4 S1; 
+G4 S1;
 
 M260 A8  ;calibrate stacker cams via I2C
 M260 B52
 M260 S1
-G4 S3 
+G4 S3
