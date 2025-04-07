@@ -1739,7 +1739,7 @@
 #define INVERT_J_DIR false
 #define INVERT_K_DIR false
 #define INVERT_U_DIR false
-#define INVERT_V_DIR false
+#define INVERT_V_DIR true // inverting x axis motor for homing
 //#define INVERT_W_DIR false
 
 // @section extruder
